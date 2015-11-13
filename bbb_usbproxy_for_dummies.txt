@@ -1,0 +1,66 @@
+Read this and other docs first
+	Read this the whole way before you do anything else, it may cost less this way.
+	Watch what'shisname's presentation about usb-mitm on youtube
+	French guide is broken
+
+Obtain hardware needed
+	Shopping list
+		BeagleBoneBlack
+		USB hub
+		Power supply(s) for BBB & USB hub
+		Asst USB cables
+		Ethernet cable
+		MicroSD card >4gb
+		Display with HDMI input
+		HDMI cable
+		Proper USB keyboard & mouse (trust me, you don't want to do it on a media center keyboard/mouse combo)
+
+
+Set up hardware
+	Unbox
+	Plug USB hub into BBB
+	Plug keyboard and mouse into USB hub
+	Plug BBB into your display
+	Plug BBB and USB hub into power supply(s)
+	Plug BBB into your computer
+
+	
+
+Get image file
+	From github:
+		TODO FIXME
+
+Flash image to SD card
+	Windows:
+		TODO FIXME
+	Ubuntu:
+		TODO FIXME
+
+Turn on BBB
+	Put MicroSD card into BBB (You may need to temporarily unplug the HDMI cable to do this)
+	Turn on Display
+	Press buttons on BBB then wait a while
+
+
+Log in to BBB
+	USERNAME: "debian"
+	PASSWORD: "temppwd"
+
+Build source on image
+	cd ~/USBProxy/src/
+	sudo make
+
+Connect via SSH
+	This lets us keep giving commands
+	USB port won't be any good to control the BBB once we run usb-mitm
+	Windows:
+		PuTTY:
+			TODO FIXME
+
+Run usb-mitm
+	-l makes captured data print to console
+	sudo ./~/USBProxy/src/usb-mitm -l
+
+
+Interpret data
+	???
