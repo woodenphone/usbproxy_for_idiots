@@ -1,0 +1,11 @@
+Useful links:
+
+
+Videos:
+	dominicgs's Shmoocon presentation about usb-mitm on youtube
+		https://www.youtube.com/watch?v=5JnAeakUBnU
+
+Code:
+	Official Github page
+		https://github.com/dominicgs/USBProxy
+

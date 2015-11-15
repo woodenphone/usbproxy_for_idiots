@@ -1,0 +1,14 @@
+usb-mitm - command line tool for controlling USBProxy
+Usage: /home/debian/USBProxy/src/usb-mitm [OPTIONS]
+Options:
+        -v <vendorId> VendorID of target device
+        -p <productId> ProductID of target device
+        -d Enable debug messages (-dd for increased verbosity)
+        -s Server mode, listen on port 10400
+        -c <hostname | address> Client mode, connect to server at hostname or address
+        -l Enable stream logger (logs to stderr)
+        -i Enable UDP injector
+        -x Enable Xbox360 UDPHID injector & filter
+        -k Keylogger with ROT13 filter (for demo)
+        -w <filename> Write to pcap file for viewing in Wireshark
+        -h Display this message

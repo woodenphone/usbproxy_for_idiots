@@ -65,7 +65,7 @@ Log in to BBB
 
 Find out your BBB's IP address
 	Run this command on the BBB
-		ifconfig
+		"ip addr show"
 	It will probably be something similar to 192.168.x.x
 	Copy your one down.
 	This address may change if you power off or disconnect your BBB
@@ -98,9 +98,12 @@ Connect via SSH
 
 Run usb-mitm
 	Needs to be run with elevated priveliges
+	You may be prompted to enter your password. If so, the default is "temppwd"
 	-l makes captured data print to console
+	-w <filename> savees output to pcap file for wireshark
 	Run this command:
-		sudo ./~/USBProxy/src/usb-mitm -l
+	 	sudo ~/USBProxy/src/usb-mitm -l -w usb.pcap
+
 
 
 Interpret data
