@@ -1,0 +1,197 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2015.11.27 17:35:15 =~=~=~=~=~=~=~=~=~=~=~=
+login as: debian
+debian@192.168.11.38's password: 
+Linux arm 3.12.0-bone8 #1 SMP Mon Nov 18 18:49:58 EST 2013 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Fri Nov 27 09:35:04 2015 from user-pc
+debian@arm:~$ ls -lah
+total 36K
+drwxr-xr-x 4 debian debian 4.0K Mar  3  2014 .
+drwxr-xr-x 3 root   root   4.0K Dec 18  2013 ..
+-rw-r--r-- 1 debian debian  220 Jan  1  2013 .bash_logout
+-rw-r--r-- 1 debian debian 3.4K Jan  1  2013 .bashrc
+-rw-r--r-- 1 debian debian   25 Jan 14  2014 .gitconfig
+-rw------- 1 debian debian   49 Feb 11  2014 .lesshst
+-rw-r--r-- 1 debian debian  675 Jan  1  2013 .profile
+drwx------ 2 debian debian 4.0K Mar  3  2014 .ssh
+drwxr-xr-x 7 debian debian 4.0K Jan 14  2014 USBProxy
+debian@arm:~$ cd ~u/USBPcd ~/USBProxy/src/
+debian@arm:~/USBProxy/src$ make
+make -C lib
+make[1]: Entering directory `/home/debian/USBProxy/src/lib'
+/usr/bin/gcc  -Wall -g -fdata-sections -ffunction-sections -MMD -MP -DNVALGRIND -I../include -I/usr/src -I/usr/include -I/usr/local/include  -c -o FDInfo.o FDInfo.c
+/usr/bin/gcc  -Wall -g -fdata-sections -ffunction-sections -MMD -MP -DNVALGRIND -I../include -I/usr/src -I/usr/include -I/usr/local/include  -c -o get_tid.o get_tid.c
+/usr/bin/gcc  -Wall -g -fdata-sections -ffunction-sections -MMD -MP -DNVALGRIND -I../include -I/usr/src -I/usr/include -I/usr/local/include  -c -o HaltSignal.o HaltSignal.c
+/usr/bin/gcc  -Wall -g -fdata-sections -ffunction-sections -MMD -MP -DNVALGRIND -I../include -I/usr/src -I/usr/include -I/usr/local/include  -c -o mqueue_helpers.o mqueue_helpers.c
+/usr/bin/g++ -std=gnu++98 -pedantic -felide-constructors -fno-exceptions -fno-rtti -Wall -g -fdata-sections -ffunction-sections -MMD -MP -DNVALGRIND -I../include -I/usr/src -I/usr/include -I/usr/local/include  -c -o Configuration.o Configuration.cpp
+/usr/bin/g++ -std=gnu++98 -pedantic -felide-constructors -fno-exceptions -fno-rtti -Wall -g -fdata-sections -ffunction-sections -MMD -MP -DNVALGRIND -I../include -I/usr/src -I/usr/include -I/usr/local/include  -c -o Criteria.o Criteria.cpp
+/usr/bin/g++ -std=gnu++98 -pedantic -felide-constructors -fno-exceptions -fno-rtti -Wall -g -fdata-sections -ffunction-sections -MMD -MP -DNVALGRIND -I../include -I/usr/src -I/usr/include -I/usr/local/include  -c -o Device.o Device.cpp
+/usr/bin/g++ -std=gnu++98 -pedantic -felide-constructors -fno-exceptions -fno-rtti -Wall -g -fdata-sections -ffunction-sections -MMD -MP -DNVALGRIND -I../include -I/usr/src -I/usr/include -I/usr/local/include  -c -o DeviceQualifier.o DeviceQualifier.cpp
+/usr/bin/g++ -std=gnu++98 -pedantic -felide-constructors -fno-exceptions -fno-rtti -Wall -g -fdata-sections -ffunction-sections -MMD -MP -DNVALGRIND -I../include -I/usr/src -I/usr/include -I/usr/local/include  -c -o Endpoint.o Endpoint.cpp
+/usr/bin/g++ -std=gnu++98 -pedantic -felide-constructors -fno-exceptions -fno-rtti -Wall -g -fdata-sections -ffunction-sections -MMD -MP -DNVALGRIND -I../include -I/usr/src -I/usr/include -I/usr/local/include  -c -o HexString.o HexString.cpp
+/usr/bin/g++ -std=gnu++98 -pedantic -felide-constructors -fno-exceptions -fno-rtti -Wall -g -fdata-sections -ffunction-sections -MMD -MP -DNVALGRIND -I../include -I/usr/src -I/usr/include -I/usr/local/include  -c -o HID.o HID.cpp
+/usr/bin/g++ -std=gnu++98 -pedantic -felide-constructors -fno-exceptions -fno-rtti -Wall -g -fdata-sections -ffunction-sections -MMD -MP -DNVALGRIND -I../include -I/usr/src -I/usr/include -I/usr/local/include  -c -o Interface.o Interface.cpp
+/usr/bin/g++ -std=gnu++98 -pedantic -felide-constructors -fno-exceptions -fno-rtti -Wall -g -fdata-sections -ffunction-sections -MMD -MP -DNVALGRIND -I../include -I/usr/src -I/usr/include -I/usr/local/include  -c -o InterfaceGroup.o InterfaceGroup.cpp
+/usr/bin/g++ -std=gnu++98 -pedantic -felide-constructors -fno-exceptions -fno-rtti -Wall -g -fdata-sections -ffunction-sections -MMD -MP -DNVALGRIND -I../include -I/usr/src -I/usr/include -I/usr/local/include  -c -o Manager.o Manager.cpp
+Manager.cpp: In function void spinner(int):
+Manager.cpp:251:24: warning: deprecated conversion from string constant to char* [-Wwrite-strings]
+/usr/bin/g++ -std=gnu++98 -pedantic -felide-constructors -fno-exceptions -fno-rtti -Wall -g -fdata-sections -ffunction-sections -MMD -MP -DNVALGRIND -I../include -I/usr/src -I/usr/include -I/usr/local/include  -c -o RelayReader.o RelayReader.cpp
+/usr/bin/g++ -std=gnu++98 -pedantic -felide-constructors -fno-exceptions -fno-rtti -Wall -g -fdata-sections -ffunction-sections -MMD -MP -DNVALGRIND -I../include -I/usr/src -I/usr/include -I/usr/local/include  -c -o RelayWriter.o RelayWriter.cpp
+/usr/bin/g++ -std=gnu++98 -pedantic -felide-constructors -fno-exceptions -fno-rtti -Wall -g -fdata-sections -ffunction-sections -MMD -MP -DNVALGRIND -I../include -I/usr/src -I/usr/include -I/usr/local/include  -c -o TCP_Helper.o TCP_Helper.cpp
+/usr/bin/g++ -std=gnu++98 -pedantic -felide-constructors -fno-exceptions -fno-rtti -Wall -g -fdata-sections -ffunction-sections -MMD -MP -DNVALGRIND -I../include -I/usr/src -I/usr/include -I/usr/local/include  -c -o USBString.o USBString.cpp
+make[1]: Leaving directory `/home/debian/USBProxy/src/lib'
+make -C Injectors
+make[1]: Entering directory `/home/debian/USBProxy/src/Injectors'
+/usr/bin/g++ -std=gnu++98 -pedantic -felide-constructors -fno-exceptions -fno-rtti -Wall -g -fdata-sections -ffunction-sections -MMD -MP -DNVALGRIND -I../include -I/usr/src -I/usr/include -I/usr/local/include  -c -o Injector.o Injector.cpp
+/usr/bin/g++ -std=gnu++98 -pedantic -felide-constructors -fno-exceptions -fno-rtti -Wall -g -fdata-sections -ffunction-sections -MMD -MP -DNVALGRIND -I../include -I/usr/src -I/usr/include -I/usr/local/include  -c -o Injector_UDP.o Injector_UDP.cpp
+/usr/bin/g++ -std=gnu++98 -pedantic -felide-constructors -fno-exceptions -fno-rtti -Wall -g -fdata-sections -ffunction-sections -MMD -MP -DNVALGRIND -I../include -I/usr/src -I/usr/include -I/usr/local/include  -c -o Injector_UDPHID.o Injector_UDPHID.cpp
+make[1]: Leaving directory `/home/debian/USBProxy/src/Injectors'
+make -C Filters
+make[1]: Entering directory `/home/debian/USBProxy/src/Filters'
+/usr/bin/g++ -std=gnu++98 -pedantic -felide-constructors -fno-exceptions -fno-rtti -Wall -g -fdata-sections -ffunction-sections -MMD -MP -DNVALGRIND -I../include -I/usr/src -I/usr/include -I/usr/local/include  -c -o PacketFilter_Callback.o PacketFilter_Callback.cpp
+/usr/bin/g++ -std=gnu++98 -pedantic -felide-constructors -fno-exceptions -fno-rtti -Wall -g -fdata-sections -ffunction-sections -MMD -MP -DNVALGRIND -I../include -I/usr/src -I/usr/include -I/usr/local/include  -c -o PacketFilter.o PacketFilter.cpp
+/usr/bin/g++ -std=gnu++98 -pedantic -felide-constructors -fno-exceptions -fno-rtti -Wall -g -fdata-sections -ffunction-sections -MMD -MP -DNVALGRIND -I../include -I/usr/src -I/usr/include -I/usr/local/include  -c -o PacketFilter_KeyLogger.o PacketFilter_KeyLogger.cpp
+/usr/bin/g++ -std=gnu++98 -pedantic -felide-constructors -fno-exceptions -fno-rtti -Wall -g -fdata-sections -ffunction-sections -MMD -MP -DNVALGRIND -I../include -I/usr/src -I/usr/include -I/usr/local/include  -c -o PacketFilter_PcapLogger.o PacketFilter_PcapLogger.cpp
+/usr/bin/g++ -std=gnu++98 -pedantic -felide-constructors -fno-exceptions -fno-rtti -Wall -g -fdata-sections -ffunction-sections -MMD -MP -DNVALGRIND -I../include -I/usr/src -I/usr/include -I/usr/local/include  -c -o PacketFilter_Power.o PacketFilter_Power.cpp
+/usr/bin/g++ -std=gnu++98 -pedantic -felide-constructors -fno-exceptions -fno-rtti -Wall -g -fdata-sections -ffunction-sections -MMD -MP -DNVALGRIND -I../include -I/usr/src -I/usr/include -I/usr/local/include  -c -o PacketFilter_ROT13.o PacketFilter_ROT13.cpp
+/usr/bin/g++ -std=gnu++98 -pedantic -felide-constructors -fno-exceptions -fno-rtti -Wall -g -fdata-sections -ffunction-sections -MMD -MP -DNVALGRIND -I../include -I/usr/src -I/usr/include -I/usr/local/include  -c -o PacketFilter_StreamLog.o PacketFilter_StreamLog.cpp
+/usr/bin/g++ -std=gnu++98 -pedantic -felide-constructors -fno-exceptions -fno-rtti -Wall -g -fdata-sections -ffunction-sections -MMD -MP -DNVALGRIND -I../include -I/usr/src -I/usr/include -I/usr/local/include  -c -o PacketFilter_UDPHID.o PacketFilter_UDPHID.cpp
+make[1]: Leaving directory `/home/debian/USBProxy/src/Filters'
+make -C tools
+make[1]: Entering directory `/home/debian/USBProxy/src/tools'
+/usr/bin/g++ -I/usr/include/python3.2mu -I/usr/include/python3.2mu -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -std=gnu++98 -pedantic -felide-constructors -fno-exceptions -fno-rtti -Wall -g -fdata-sections -ffunction-sections -MMD -MP -DNVALGRIND -I../include -I../lib -I../Injectors -I../Filters -I../Proxies -I../Hosts -I../Devices -I/usr/src -I/usr/include -I/usr/local/include  -c -o usb-mitm.o usb-mitm.cpp
+cc1plus: warning: command line option -Wstrict-prototypes is valid for Ada/C/ObjC but not for C++ [enabled by default]
+In file included from /usr/include/python3.2mu/Python.h:8:0,
+                 from ../include/PacketFilter_Python.h:32,
+                 from usb-mitm.cpp:56:
+/usr/include/python3.2mu/pyconfig.h:1182:0: warning: "_POSIX_C_SOURCE" redefined [enabled by default]
+/usr/include/features.h:163:0: note: this is the location of the previous definition
+/usr/include/python3.2mu/pyconfig.h:1204:0: warning: "_XOPEN_SOURCE" redefined [enabled by default]
+/usr/include/features.h:165:0: note: this is the location of the previous definition
+In file included from /usr/include/python3.2mu/Python.h:76:0,
+                 from ../include/PacketFilter_Python.h:32,
+                 from usb-mitm.cpp:56:
+/usr/include/python3.2mu/longobject.h:72:44: warning: ISO C++ 1998 does not support long long [-Wlong-long]
+/usr/include/python3.2mu/longobject.h:73:52: warning: ISO C++ 1998 does not support long long [-Wlong-long]
+/usr/include/python3.2mu/longobject.h:74:1: warning: ISO C++ 1998 does not support long long [-Wlong-long]
+/usr/include/python3.2mu/longobject.h:75:1: warning: ISO C++ 1998 does not support long long [-Wlong-long]
+/usr/include/python3.2mu/longobject.h:76:1: warning: ISO C++ 1998 does not support long long [-Wlong-long]
+/usr/include/python3.2mu/longobject.h:77:1: warning: ISO C++ 1998 does not support long long [-Wlong-long]
+make[1]: Leaving directory `/home/debian/USBProxy/src/tools'
+make -C Devices
+make[1]: Entering directory `/home/debian/USBProxy/src/Devices'
+/usr/bin/g++ -std=gnu++98 -pedantic -felide-constructors -fno-exceptions -fno-rtti -Wall -g -fdata-sections -ffunction-sections -MMD -MP -DNVALGRIND -I../include -I/usr/src -I/usr/include -I/usr/local/include  -c -o DeviceProxy_LibUSB.o DeviceProxy_LibUSB.cpp
+/usr/bin/g++ -std=gnu++98 -pedantic -felide-constructors -fno-exceptions -fno-rtti -Wall -g -fdata-sections -ffunction-sections -MMD -MP -DNVALGRIND -I../include -I/usr/src -I/usr/include -I/usr/local/include  -c -o DeviceProxy_Loopback.o DeviceProxy_Loopback.cpp
+/usr/bin/g++ -std=gnu++98 -pedantic -felide-constructors -fno-exceptions -fno-rtti -Wall -g -fdata-sections -ffunction-sections -MMD -MP -DNVALGRIND -I../include -I/usr/src -I/usr/include -I/usr/local/include  -c -o DeviceProxy_TCP.o DeviceProxy_TCP.cpp
+DeviceProxy_TCP.cpp: In member function virtual int DeviceProxy_TCP::control_request(const usb_ctrlrequest*, int*, __u8*, int):
+DeviceProxy_TCP.cpp:101:1: warning: control reaches end of non-void function [-Wreturn-type]
+make[1]: Leaving directory `/home/debian/USBProxy/src/Devices'
+make -C Hosts
+make[1]: Entering directory `/home/debian/USBProxy/src/Hosts'
+/usr/bin/gcc  -Wall -g -fdata-sections -ffunction-sections -MMD -MP -DNVALGRIND -I../include -I/usr/src -I/usr/include -I/usr/local/include  -c -o GadgetFS_helpers.o GadgetFS_helpers.c
+/usr/bin/g++ -std=gnu++98 -pedantic -felide-constructors -fno-exceptions -fno-rtti -Wall -g -fdata-sections -ffunction-sections -MMD -MP -DNVALGRIND -I../include -I/usr/src -I/usr/include -I/usr/local/include  -c -o HostProxy_GadgetFS.o HostProxy_GadgetFS.cpp
+/usr/bin/g++ -std=gnu++98 -pedantic -felide-constructors -fno-exceptions -fno-rtti -Wall -g -fdata-sections -ffunction-sections -MMD -MP -DNVALGRIND -I../include -I/usr/src -I/usr/include -I/usr/local/include  -c -o HostProxy_TCP.o HostProxy_TCP.cpp
+make[1]: Leaving directory `/home/debian/USBProxy/src/Hosts'
+make -C Bindings
+make[1]: Entering directory `/home/debian/USBProxy/src/Bindings'
+/usr/bin/g++ -I/usr/include/python3.2mu -I/usr/include/python3.2mu -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -std=gnu++98 -pedantic -felide-constructors -fno-exceptions -fno-rtti -Wall -g -fdata-sections -ffunction-sections -MMD -MP -DNVALGRIND -I../include -I/usr/include/python3.2mu -I/usr/include/python3.2mu -I/usr/src -I/usr/include -I/usr/local/include  -c -o PacketFilter_Python.o PacketFilter_Python.cpp
+cc1plus: warning: command line option -Wstrict-prototypes is valid for Ada/C/ObjC but not for C++ [enabled by default]
+In file included from /usr/include/python3.2mu/Python.h:8:0,
+                 from ../include/PacketFilter_Python.h:32,
+                 from PacketFilter_Python.cpp:27:
+/usr/include/python3.2mu/pyconfig.h:1182:0: warning: "_POSIX_C_SOURCE" redefined [enabled by default]
+/usr/include/features.h:163:0: note: this is the location of the previous definition
+/usr/include/python3.2mu/pyconfig.h:1204:0: warning: "_XOPEN_SOURCE" redefined [enabled by default]
+/usr/include/features.h:165:0: note: this is the location of the previous definition
+In file included from /usr/include/python3.2mu/Python.h:76:0,
+                 from ../include/PacketFilter_Python.h:32,
+                 from PacketFilter_Python.cpp:27:
+/usr/include/python3.2mu/longobject.h:72:44: warning: ISO C++ 1998 does not support long long [-Wlong-long]
+/usr/include/python3.2mu/longobject.h:73:52: warning: ISO C++ 1998 does not support long long [-Wlong-long]
+/usr/include/python3.2mu/longobject.h:74:1: warning: ISO C++ 1998 does not support long long [-Wlong-long]
+/usr/include/python3.2mu/longobject.h:75:1: warning: ISO C++ 1998 does not support long long [-Wlong-long]
+/usr/include/python3.2mu/longobject.h:76:1: warning: ISO C++ 1998 does not support long long [-Wlong-long]
+/usr/include/python3.2mu/longobject.h:77:1: warning: ISO C++ 1998 does not support long long [-Wlong-long]
+make[1]: Leaving directory `/home/debian/USBProxy/src/Bindings'
+echo  -I/usr/include/python3.2mu -I/usr/include/python3.2mu -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security
+-I/usr/include/python3.2mu -I/usr/include/python3.2mu -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security
+/usr/bin/gcc  -I/usr/include/python3.2mu -I/usr/include/python3.2mu -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE=2 -g -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -g -o usb-mitm Bindings/PacketFilter_Python.o Devices/DeviceProxy_LibUSB.o Devices/DeviceProxy_Loopback.o Devices/DeviceProxy_TCP.o Filters/PacketFilter_Callback.o Filters/PacketFilter_KeyLogger.o Filters/PacketFilter.o Filters/PacketFilter_PcapLogger.o Filters/PacketFilter_Power.o Filters/PacketFilter_ROT13.o Filters/PacketFilter_StreamLog.o Filters/PacketFilter_UDPHID.o Hosts/GadgetFS_helpers.o Hosts/HostProxy_GadgetFS.o Hosts/HostProxy_TCP.o Injectors/Injector.o Injectors/Injector_UDPHID.o Injectors/Injector_UDP.o lib/Configuration.o lib/Criteria.o lib/Device.o lib/DeviceQualifier.o lib/Endpoint.o lib/FDInfo.o lib/get_tid.o lib/HaltSignal.o lib/HexString.o lib/HID.o lib/InterfaceGroup.o lib/Interface.o lib/Manager.o lib/mqueue_helpers.o lib/RelayReader.o lib/RelayWriter.o lib/TCP_Helper.o lib/USBString.o tools/usb-mitm.o -Wl,--gc-sections -lusb-1.0 -ludev -lstdc++ -lpthread -lpcap -lrt -L/usr/lib/python3.2/config-3.2mu -lpthread -ldl -lutil -lm -lpython3.2mu -Xlinker -export-dynamic -Wl,-O1 -Wl,-Bsymbolic-functions
+debian@arm:~/USBProxy/src$ ls -lah
+total 588K
+drwxr-xr-x 10 debian debian 4.0K Nov 27 09:36 .
+drwxr-xr-x  7 debian debian 4.0K Jan 14  2014 ..
+drwxr-xr-x  2 debian debian 4.0K Nov 27 09:36 Bindings
+-rw-r--r--  1 debian debian 2.1K Jan 14  2014 common.mk
+drwxr-xr-x  2 debian debian 4.0K Nov 27 09:36 Devices
+drwxr-xr-x  2 debian debian 4.0K Nov 27 09:36 Filters
+drwxr-xr-x  2 debian debian 4.0K Nov 27 09:36 Hosts
+drwxr-xr-x  2 debian debian 4.0K Mar  3  2014 include
+drwxr-xr-x  2 debian debian 4.0K Nov 27 09:36 Injectors
+drwxr-xr-x  2 debian debian 4.0K Nov 27 09:36 lib
+-rw-r--r--  1 debian debian 1.3K Jan 14  2014 Makefile
+drwxr-xr-x  2 debian debian 4.0K Nov 27 09:36 tools
+-rwxr-xr-x  1 debian debian 540K Nov 27 09:36 usb-mitm
+debian@arm:~/USBProxy/src$ cd ~/
+debian@arm:~$ ls -lah
+total 36K
+drwxr-xr-x 4 debian debian 4.0K Mar  3  2014 .
+drwxr-xr-x 3 root   root   4.0K Dec 18  2013 ..
+-rw-r--r-- 1 debian debian  220 Jan  1  2013 .bash_logout
+-rw-r--r-- 1 debian debian 3.4K Jan  1  2013 .bashrc
+-rw-r--r-- 1 debian debian   25 Jan 14  2014 .gitconfig
+-rw------- 1 debian debian   49 Feb 11  2014 .lesshst
+-rw-r--r-- 1 debian debian  675 Jan  1  2013 .profile
+drwx------ 2 debian debian 4.0K Mar  3  2014 .ssh
+drwxr-xr-x 7 debian debian 4.0K Jan 14  2014 USBProxy
+debian@arm:~$ sudo ~/USBProxy/src/usb-mitm -l -w usb.pcap
+[sudo] password for debian: 
+SIGRTMIN: 34
+cleaning up /tmp
+removing 0
+Made directory /tmp/gadget-9tv1Tb for gadget
+Made directory /tmp/mqueue-ShG5xf for mqueue
+cleaning up /tmp/mqueue-ShG5xf
+removing 0
+Device: 12 01 00 02 00 00 00 08 6d 04 34 c5 00 29 01 02 00 01
+  Manufacturer: Logitech
+  Product:      USB Receiver
+*Config(1): 09 02 3b 00 02 01 04 a0 31
+   Name: RQR29.00_B0015
+Interface(0):
+*Alt(0): 09 04 00 00 01 03 01 01 00
+HID: 09 21 11 01 00 01 22 3b 00
+EP(81): 07 05 81 03 08 00 08
+Interface(1):
+*Alt(0): 09 04 01 00 01 03 01 02 00
+HID: 09 21 11 01 00 01 22 b1 00
+EP(82): 07 05 82 03 14 00 02
+searching in [/tmp/gadget-9tv1Tb]
+Starting setup writer thread (2238) for EP00.
+Starting setup reader thread (2237) for EP00.
+^CReceived SIGINT, stopping relaying...
+Finished setup writer thread (2238) for EP00.
+Finished setup reader thread (2237) for EP00.
+Made directory /tmp/mqueue-YALh1n for mqueue
+cleaning up /tmp/mqueue-YALh1n
+removing 2
+Exiting
+done
+debian@arm:~$ ls -lah
+total 40K
+drwxr-xr-x 4 debian debian 4.0K Nov 27 09:38 .
+drwxr-xr-x 3 root   root   4.0K Dec 18  2013 ..
+-rw-r--r-- 1 debian debian  220 Jan  1  2013 .bash_logout
+-rw-r--r-- 1 debian debian 3.4K Jan  1  2013 .bashrc
+-rw-r--r-- 1 debian debian   25 Jan 14  2014 .gitconfig
+-rw------- 1 debian debian   49 Feb 11  2014 .lesshst
+-rw-r--r-- 1 debian debian  675 Jan  1  2013 .profile
+drwx------ 2 debian debian 4.0K Mar  3  2014 .ssh
+-rw-r--r-- 1 root   root     24 Nov 27 09:38 usb.pcap
+drwxr-xr-x 7 debian debian 4.0K Jan 14  2014 USBProxy
+debian@arm:~$ 

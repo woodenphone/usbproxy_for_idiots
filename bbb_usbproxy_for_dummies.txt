@@ -25,6 +25,7 @@ Obtain hardware needed
 		Display with HDMI input
 		HDMI cable (MicroHDMI to whatever your screen uses)
 		Proper USB keyboard & mouse (trust me, you don't want to this using a media center keyboard/mouse combo)
+		#USB flash drive 1GB+ (For moving recorded USB dumps around)
 
 
 Set up hardware
@@ -68,44 +69,61 @@ Find out your BBB's IP address
 		"ip addr show"
 	It will probably be something similar to 192.168.x.x
 	Copy your one down.
-	This address may change if you power off or disconnect your BBB
-
-
-Build source on image
-	Run these commands on the BBB in this order
-		cd ~/USBProxy/src/
-		make
+	This address may change if you power off or disconnect your BBB.
 
 
 Connect via SSH
-	This lets us keep giving commands
-	USB port won't be any good to control the BBB once we run usb-mitm
+	This lets us keep giving commands.
+	The USB port won't be any good to control the BBB while usb-mitm is running.
 	Windows:
 		PuTTY:
-			Install PuTTY
-			Start PuTTY
-			Set "Host Name (or IP address)" field to the IP address of the BBB (Found using an earlier section)
-			Port should be "22"
-			Connection type should be "SSH"
+			Install PuTTY. (http://www.ninite.com makes this easy)
+			Start PuTTY.
+			Set "Host Name (or IP address)" field to the IP address of the BBB (Found using an earlier section).
+			Port should be "22".
+			Connection type should be "SSH".
 			Click the open button at the bottom.
-			When prompted to, type in the username "debian" and then press enter/return
-			When prompted to, type in the username "temppwd" and then press enter/return
+			When prompted to, type in the username "debian" and then press enter/return.
+			When prompted to, type in the username "temppwd" and then press enter/return.
 			The bottommost line should now show "debian@arm:~$"
-			You are now connected and logged in to the BBB via SSH
+			You are now connected and logged in to the BBB via SSH.
 	Ubuntu:
 		TODO FIXME
 
 
+Build usb-mitm from source on BBB
+	Run these commands on the BBB in this order:
+		cd ~/USBProxy/src/
+		make
+
+
 Run usb-mitm
-	Needs to be run with elevated priveliges
-	You may be prompted to enter your password. If so, the default is "temppwd"
-	-l makes captured data print to console
-	-w <filename> savees output to pcap file for wireshark
+	Needs to be run with elevated priveliges.
+	You may be prompted to enter your password. If so, the default is "temppwd".
+	-l makes captured data print to console.
+	-w <filename> savees output to pcap file for wireshark.
+	So appending "-w usb.pcap" will save a wireshark-compatible record to a file in the current directory called "usb.pcap".
+	UNTESTED: If you instead append "-w ~usb.pcap" the file will be saved into your home directory and will be easy to find
 	Run this command:
 	 	sudo ~/USBProxy/src/usb-mitm -l -w usb.pcap
+ 	To exit usb-mitm:
+ 		Press Ctrl-C in terminal
 
+
+Collect your data for analysis
+	Windows:
+		Wireshark (Good for an overview, has timestamps):
+			Install WinSCP. (http://www.ninite.com makes this easy)
+			Use WinSCP to copy saved pcap dump to your computer
+			Open the folder you copied the dump to.
+			Open pcap dump in wireshark by double clicking the dump file.
+		Console log (How I actually seem to be getting results and searching for stuff):
+			Take log of PuTTY session and open it in a text editor
+			Sublime text is good for this.
 
 
 Interpret data
 	???
 	I'm still learning to do this.
+	Python is your friend.
+	LibUSB is tricky to set up but also your friend (Lets you talk to the usb stuff instead of just watching).

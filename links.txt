@@ -9,3 +9,6 @@ Code:
 	Official Github page
 		https://github.com/dominicgs/USBProxy
 
+Programs:
+	WinSCP - Move files to/from BBB
+		http://winscp.net/eng/index.php
