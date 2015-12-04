@@ -1,0 +1,9 @@
+Using lsusb to find more infomration about usb devices.
+See Adafruit's pages here for more details:
+https://learn.adafruit.com/hacking-the-kinect/verify-the-vid-and-pid
+https://learn.adafruit.com/hacking-the-kinect/determine-the-descriptors
+
+Make sure device is plugged in
+Run this command:
+sudo lsusb -vv > ~/info.txt
+

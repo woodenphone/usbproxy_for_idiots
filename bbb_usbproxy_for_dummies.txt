@@ -7,7 +7,7 @@ Read this and other docs first
 	Read this the whole way before you do anything else, it may cost less this way.
 	Watch dominicgs's Shmoocon presentation about usb-mitm on youtube
 		https://www.youtube.com/watch?v=5JnAeakUBnU
-	French guide is broken but may be of use
+	French guide (is broken but may be of use)
 		http://gimx.fr/wiki/index.php?title=Bbb_sniffer
 	Official Github page
 		https://github.com/dominicgs/USBProxy
@@ -47,10 +47,26 @@ Get image file
 
 
 Flash image to SD card
+	Be careful here, the drive you select to write the image to will be erased.
 	Windows:
 		TODO FIXME
+		See Adafruit guide.
+		https://learn.adafruit.com/beaglebone-black-installing-operating-systems/windows
+		http://sourceforge.net/projects/win32diskimager/
 	Ubuntu:
 		TODO FIXME
+
+
+Resize partitions on SD card (Optional):
+	This lets you use the whole of your SD card instead of only a small part.
+	For experts only, doing the wrong thing here can damage your computer.
+	Ubuntu:
+		Plug SD card in
+		Run Gparted
+		Click the device list box at the top right of the window
+		Select the device that matches the total capacity your SD card
+		TODO FIXME
+
 
 
 Turn on BBB

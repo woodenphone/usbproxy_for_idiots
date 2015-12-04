@@ -12,3 +12,10 @@ Code:
 Programs:
 	WinSCP - Move files to/from BBB
 		http://winscp.net/eng/index.php
+	win32diskimager - Write disk images to SD card
+		http://sourceforge.net/projects/win32diskimager/
+
+Guides:
+	Adafruit BBB OS install guide
+		https://learn.adafruit.com/beaglebone-black-installing-operating-systems/overview
+		https://learn.adafruit.com/beaglebone-black-installing-operating-systems/windows
